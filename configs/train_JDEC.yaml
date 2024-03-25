@@ -1,0 +1,61 @@
+train_dataset:
+  dataset:
+    name: train-paired-imageset
+    args:
+      root_path_inp: ./load/jpeg_removal/train_paired/train
+      root_path_gt: ./load/jpeg_removal/train
+      repeat: 5
+      cache: bin
+  wrapper:
+    name: JDEC-decoder_toimage_rgb
+    args:
+      inp_size: 14
+  batch_size: 16
+  
+val_dataset:
+  dataset:
+    name: valid-paired-dataset
+    args:
+      root_path_inp: ./load/jpeg_removal/train_paired/valid_10
+      root_path_gt: ./load/jpeg_removal/valid
+      repeat: 160
+      cache: bin
+      first_k: 10
+  wrapper:
+    name: JDEC-decoder_toimage_rgb
+    args:
+      inp_size: 14
+      valid: True
+  batch_size: 16
+
+
+
+model:
+  name: jdec
+  args:
+    encoder_spec:
+      name: swinv2_group_embedded
+      args:
+        use_subblock: True
+        emb_size : 256
+        num_heads: [8,8,8,8,8]
+    decoder_spec:
+      name: mlp_1dconv
+      args:
+        out_dim: 3
+        hidden_list: [512, 512, 512]
+    hidden_dim: 512
+
+optimizer:
+  name: adam
+  args:
+    lr: 1.e-4
+epoch_max: 1000
+multi_step_lr:
+  milestones: [200, 400, 600, 800]
+  gamma: 0.5
+
+epoch_val: 1
+epoch_save: 100
+
+resume: ./save/_train_JDEC/epoch-last.pth

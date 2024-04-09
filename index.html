@@ -142,18 +142,29 @@
   </section>
   <!-- End teaser video -->
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/Fig_4_ver_final_main.jpg" alt="Poster Dataset Distillation (PoDD)" class="center-image"  style="max-width: 70%; height: auto;"/>
+      <h2 class="subtitle has-text-centered">
+       <em><strong> Decoding a JPEG bitstream with the proposed JDEC.</strong></em> JDEC consists of an encoder with group spectra embedding, a decoder, and continuous cosine formulation. Inputs of JDEC are as follows: compressed spectra, quantization map. Note that our JDEC does not take images as an input. JDEC formulates latent features into a trainable continuous cosine coefficient as a function of block grid and forward to INR. Therefore, each block shares the estimated continuous cosine spectrum. 
+      </h2>
+    </div>
+  </div>
+</section>
+	
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+       <div class="item"> -->
         <!-- Your image here -->
-        <img src="static/images/Fig_4_ver_final_main.jpg" alt="MY ALT TEXT"/>
+<!--         <img src="static/images/Fig_4_ver_final_main.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Decoding a JPEG bitstream with the proposed JDEC. JDEC consists of an encoder with group spectra embedding, a decoder, and continuous cosine formulation. Inputs of JDEC are as follows: compressed spectra, quantization map. Note that our JDEC does not take images as an input. JDEC formulates latent features into a trainable continuous cosine coefficient as a function of block grid and forward to INR. Therefore, each block shares the estimated continuous cosine spectrum. 
         </h2>
-      </div>
+      </div> -->
       <!-- <div class="item">
         Your image here
         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
@@ -175,10 +186,10 @@
         Fourth image description.
       </h2>
     </div> -->
-  </div>
+<!--   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -188,7 +199,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-			We propose a practical approach to JPEG image decoding, utilizing a local implicit neural representation with continuous cosine formulation. The JPEG algorithm significantly quantizes discrete cosine transform (DCT) spectra to achieve a high compression rate, inevitably resulting in quality degradation while encoding an image. We have designed a continuous cosine spectrum estimator to address the quality degradation issue that restores the distorted spectrum. By leveraging local DCT formulations, our network has the privilege to exploit dequantization and upsampling simultaneously. Our proposed model enables decoding compressed images directly across different quality factors using a single pre-trained model without relying on a conventional JPEG decoder. As a result, our proposed network achieves state-of-the-art performance in flexible color image JPEG artifact removal tasks.           </p>
+	We propose a practical approach to JPEG image decoding, utilizing a local implicit neural representation with continuous cosine formulation. The JPEG algorithm significantly quantizes discrete cosine transform (DCT) spectra to achieve a high compression rate, inevitably resulting in quality degradation while encoding an image. We have designed a continuous cosine spectrum estimator to address the quality degradation issue that restores the distorted spectrum. By leveraging local DCT formulations, our network has the privilege to exploit dequantization and upsampling simultaneously. Our proposed model enables decoding compressed images directly across different quality factors using a single pre-trained model without relying on a conventional JPEG decoder. As a result, our proposed network achieves state-of-the-art performance in flexible color image JPEG artifact removal tasks.           </p>
         </div>
       </div>
     </div>

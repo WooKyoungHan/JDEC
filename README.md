@@ -98,4 +98,18 @@ The path to the model checkpoint and benchmark datasets should be changed.
 (e.g.`'./PATH_TO_LIVE1'` and `model_path = './PATH_TO_MODEL'`)
 
 
+## Acknowledgements
+
+This code is built on [LIIF](https://github.com/yinboc/liif),[LTE](https://github.com/jaewon-lee-b/lte), [SwinIR](https://github.com/JingyunLiang/SwinIR) and [RGB No More](https://github.com/JeongsooP/RGB-no-more). We thank the authors for sharing their codes.
+```plain
+
+BibTex:
+@inproceedings{han2024jdec,
+  title={JDEC: JPEG Decoding via Enhanced Continuous Cosine Coefficients},
+  author={Han, Woo Kyoung and Im, Sunghoon and Kim, Jaedeok and Jin, Kyong Hwan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={2784--2793},
+  year={2024}
+}
+```
 

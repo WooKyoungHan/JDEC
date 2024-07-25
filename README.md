@@ -74,3 +74,28 @@ Our train and valid sets follow the prior work [FBCNN](https://github.com/jiaxi-
   ```
 
  
+
+## Train
+The basic train code is : 
+```
+python train.py --config configs/train_JDEC.yaml --gpu 0
+```
+
+If you want to modify some configuration (e.g. the range of input bit-depth) modify `.yaml` files and run 
+```
+python train.py --config configs/FancyConfiguration.yaml --gpu 0
+```
+
+We provide our main model's [checkpoint](https://drive.google.com/file/d/1xjx5u-0YJlsXlRMKNCxDzi6s76kxLJU1/view?usp=sharing).
+
+## Test
+The basic test code is : 
+```
+python test.py 
+```
+The path to the model checkpoint and benchmark datasets should be changed.
+
+(e.g.`'./PATH_TO_LIVE1'` and `model_path = './PATH_TO_MODEL'`)
+
+
+

@@ -10,16 +10,11 @@ This repository contains the official implementation for JDEC introduced in the 
 [Project Page](https://wookyounghan.github.io/JDEC/)
 
 
-## Concept
-
-
-
-![JDEC concept](./static/videos/jdec_banner.mov)
-
-Instead of using a conventional JPEG decoder to refine the high-quality (HQ) image from the low-quality (LQ) image, our JDEC directly decodes the LQ spectrum by learning a continuous spectrum.
-
+## Overall Structure
 
 ![Overall Structure of Our JDEC](./static/images/Fig_4_ver_final_main.jpg)
+
+JDEC consists of an encoder with group spectra embedding, a decoder, and a continuous cosine formulation. Inputs of JDEC are as follows: compressed spectra and quantization map. Note that our JDEC does not take images as input. JDEC formulates latent features into a trainable continuous cosine coefficient as a function of the block grid and forwards to INR. Therefore, each block shares the estimated continuous cosine spectrum.
 
 
 TBD

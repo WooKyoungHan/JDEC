@@ -86,7 +86,7 @@ If you want to modify some configuration (e.g. the range of input bit-depth) mod
 python train.py --config configs/FancyConfiguration.yaml --gpu 0
 ```
 
-We provide our main model's [checkpoint](https://drive.google.com/file/d/1xjx5u-0YJlsXlRMKNCxDzi6s76kxLJU1/view?usp=sharing).
+We provide our main model's [checkpoint](https://drive.google.com/file/d/1_TLoGHLBtdbPdApRmI0y0YW2nEqnO8Dr/view?usp=sharing).
 
 ## Test
 The basic test code is : 

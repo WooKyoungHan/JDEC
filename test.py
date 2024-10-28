@@ -7,7 +7,6 @@ import torch
 
 from torchvision import transforms
 import numpy as np
-import models
 
 from tqdm import tqdm
 from utils_ import Averager
@@ -17,6 +16,7 @@ import utils.custom_transforms as ctrans
 import dct_manip as dm
 from utils_ import mkdir
 import utils_
+from models.models import models, make
 
 
 
@@ -32,7 +32,9 @@ elif setname is 'ICB':
 model_path = './PATH_TO_MODEL'
 
 model_spec = torch.load(model_path)['model']
-model = models.make(model_spec, load_sd=True).cuda()
+print("Available models:", models.keys())
+model_spec['args']['encoder_spec']['name'] = 'swinv2_group_embedded'
+model = make(model_spec, load_sd=True).cuda()
 
 batch_y = Rearrange('c (h s1) (w s2) ph pw -> (h w) c s1 s2 ph pw',s1 = 140, s2=140)
 batch_c = Rearrange('c (h s1) (w s2) ph pw -> (h w) c s1 s2 ph pw',s1 = 70, s2=70)

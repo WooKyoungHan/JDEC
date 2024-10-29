@@ -12,6 +12,8 @@ def register(name):
 
 
 def make(model_spec, args=None, load_sd=False):
+    if (model_spec['name']) == ('IPEC-decoder_dctform-rgb-share-size4'):
+        model_spec['name'] = 'jdec'
     if args is not None:
         model_args = copy.deepcopy(model_spec['args'])
         model_args.update(args)
